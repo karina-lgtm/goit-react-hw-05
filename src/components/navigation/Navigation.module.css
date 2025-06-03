@@ -1,0 +1,15 @@
+.blokNav {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  border-bottom: 3px solid #5c48da;
+  padding: 16px 25px;
+}
+.link {
+  font-size: 25px;
+  font-weight: 600;
+  color: #000;
+}
+.isActive {
+  color: peru;
+}

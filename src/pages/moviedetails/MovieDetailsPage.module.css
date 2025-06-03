@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 10px 0;
+}
+.backBtn {
+  display: block;
+  padding: 5px;
+  width: 120px;
+  text-align: center;
+}
+.backBtn:hover {
+  color: #ffffff;
+  background-color: #397970;
+  border-radius: 10px;
+}
+.blokInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.leftSide {
+}
+.img {
+  width: 200px;
+  height: 300px;
+  object-fit: contain;
+}
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #000;
+}
+.subList {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+}
+.link {
+  color: #000;
+}
+.isActive {
+  color: peru;
+}
+.infoBlock {
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.additionTitle {
+  font-size: 20px;
+  color: #000;
+  padding-left: 20px;
+}
+.additionList {
+  display: flex;
+  justify-content: space-around;
+}

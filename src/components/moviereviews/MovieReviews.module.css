@@ -1,0 +1,32 @@
+.container {
+  color: #000;
+}
+.list {
+  padding: 0 32px;
+}
+.item img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+}
+.item {
+  display: grid;
+  grid-template-columns: 32% 68%;
+  grid-template-rows: 6% 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+}
+.title {
+  text-transform: uppercase;
+
+  text-align: center;
+  grid-area: 1 / 1 / 2 / 3;
+}
+.img {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.text {
+  grid-area: 2 / 2 / 3 / 3;
+}
