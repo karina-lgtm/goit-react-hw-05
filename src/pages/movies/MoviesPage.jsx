@@ -14,7 +14,7 @@ const searchValueSchema = Yup.object().shape({
 });
 
 const MoviesPage = () => {
-  const [collection, setCollection] = useState([]);
+  const [collection, setColletion] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -33,14 +33,14 @@ const MoviesPage = () => {
 
   useEffect(() => {
     if (!query) {
-      setCollection([]);
+      setColletion([]);
       return;
     }
     async function fetchSearchMovies(query) {
       try {
         setLoading(true);
         const res = await fetchMovies(query);
-        setCollection(res.results); 
+        setColletion(res.data.results);
       } catch (error) {
         console.log(" error", error);
       } finally {
@@ -58,20 +58,10 @@ const MoviesPage = () => {
         onSubmit={handlerSubmit}
         validationSchema={searchValueSchema}
       >
-        {({ errors, touched }) => (
-          <Form>
-            <Field
-              type="text"
-              className={style.input}
-              name="search"
-              placeholder="Search movies..."
-            />
-            <button type="submit">Search</button>
-            {errors.search && touched.search && (
-              <div className={style.error}>{errors.search}</div>
-            )}
-          </Form>
-        )}
+        <Form>
+          <Field type="text" className={style.input} name="search" />
+          <button type="submit">Search</button>
+        </Form>
       </Formik>
       {collection.length > 0 && <MovieList collection={collection} />}
     </div>
